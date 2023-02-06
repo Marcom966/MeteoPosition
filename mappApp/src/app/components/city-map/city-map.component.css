@@ -1,0 +1,14 @@
+.map-frame{
+border: 2px solid blue;
+border-radius: 2px;
+border-width: 2px;
+height: 1000px;
+}
+.map-container{
+    position: relative;
+    margin: 5px;
+
+}
+#map {
+    height: 100%;
+  }

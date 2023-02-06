@@ -1,0 +1,15 @@
+<div class="container" id="container">
+    <form #cityForm="ngForm" (ngSubmit)="getValues(cityForm)" class="City">
+        <select name="cities" id="citiesSeach" ngModel name="cityToChoose">
+            <option value="" *ngFor="let City of cityArray" [ngValue]="City">{{City.cityName}}</option>
+        </select>
+        <input type="checkbox" ngModel  name="temperatura"/>Temperatura
+        <input type="checkbox" ngModel  name="wind"/>Vento 
+        <input type="checkbox" ngModel  name="soil_temperature"/>Temperatura al suolo
+        <input type="checkbox" ngModel  name="weathercode"/> Tempo
+        <button type="submit" id="onSubmit" class="button">Invia
+        </button>
+    </form>
+    <div class="appCityMap" app-city-map [dataToPass]="dataToPass"></div>
+
+</div>
